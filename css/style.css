@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --VERYDARKGRAYISHBLUE: hsl(217, 19%, 35%);
+  --DESATURATEDDARKBLUE: hsl(214, 17%, 51%);
+  --GRAYISHBLUE: hsl(212, 23%, 69%);
+  --LIGHTGRAYISHBLUE: hsl(210, 46%, 95%);
+}
+
+body {
+  background-color: var(--LIGHTGRAYISHBLUE);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+}
+
+main {
+  max-width: 660px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+main .image img {
+  display: block;
+  max-width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+main .text {
+  padding: 0 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+main .text h2 {
+  color: var(--VERYDARKGRAYISHBLUE);
+  font-weight: 700;
+}
+
+main .text p {
+  color: var(--DESATURATEDDARKBLUE);
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.footer .author img {
+  max-width: 3rem;
+  border-radius: 50%;
+}
+
+.footer .author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem 1rem 2rem;
+}
+
+.footer .author .name {
+  color: var(--VERYDARKGRAYISHBLUE);
+  font-weight: 700;
+}
+
+.footer .author .date {
+  color: var(--GRAYISHBLUE);
+}
+
+.footer #share-icon {
+  padding: 0.5rem;
+  background-color: var(--LIGHTGRAYISHBLUE);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+
+.footer .share-links {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  background-color: var(--VERYDARKGRAYISHBLUE);
+  overflow: hidden;
+  z-index: 0;
+  transition: all 0.3s ease-in-out;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 0;
+}
+
+.footer.active .share-links {
+  height: auto;
+  padding: 2rem;
+}
+
+.footer .share-links p {
+  letter-spacing: 5px;
+  color: var(--GRAYISHBLUE);
+}
+
+.footer .share-links img {
+  max-width: 20px;
+  color: white;
+}
+
+.footer.active .share-links {
+  height: auto;
+  padding: 1.5rem 2rem 2rem 2rem;
+}
